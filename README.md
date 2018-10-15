@@ -1,2 +1,3 @@
 # programming.in.th
-not Best!!
+Go!!-> http://programming.in.th/
+this not Best!!
