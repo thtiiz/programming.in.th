@@ -8,7 +8,7 @@ void merge(double a[], int l, int m, int r){
     double L[n1], R[n2];
     for(i=0; i<n1; i++){
         L[i] = a[l+i];
-        dp[i+1] = dp[i]+L[i];
+        dp[i+1] = dp[i]+L[i]; //use dp to memorize sum
     }
     for(i=0; i<n2; i++)
         R[i] = a[m+i+1];
@@ -20,8 +20,8 @@ void merge(double a[], int l, int m, int r){
         }
         else {
             a[k] = R[j];
-            sum += R[j]*(n1-i);
-            sum += dp[n1]-dp[i];
+            sum += R[j]*(n1-i); // aj<ai (n1-i) times
+            sum += dp[n1]-dp[i]; // sum of a[i]->a[n1]
             j++;
         }
         k++;
@@ -38,6 +38,7 @@ void merge(double a[], int l, int m, int r){
     }
 }
 
+/*merge sort*/
 void mergesort(double a[], int l, int r) {
     if(l<r){
         int mid = (l+r)/2;
@@ -54,7 +55,7 @@ int main() {
     double pair[100005];
     for(i=0; i<n; i++) {
         scanf("%lf %d", &a, &b);
-        pair[b-1] = a;
+        pair[b-1] = a; //b=1,2,3,4,...,n
     }
     mergesort(pair, 0, n-1);
     printf("%0.lf", sum);
