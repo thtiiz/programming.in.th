@@ -17,7 +17,7 @@ int main() {
             digit[1] = ((i-digit[2])/10)%10;
             digit[0] = (((i-digit[2])/10-digit[1])/10)%10;
             if(student[i] > 1)
-                pair += student[i]*(student[i]-1)/2; // NC2(combination)
+                pair += student[i]*(student[i]-1)/2; // NC2(combination) 
                 // printf("choose2pair+: %lld (%d)\n",pair, i);
             for(j=i+1; j<1000; j++) { //หน่วย
                 if(student[j] > 0) {

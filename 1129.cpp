@@ -5,7 +5,7 @@ int main() {
     scanf("%d %d", &n, &k);
     for(i=0; i<n; i++) f[i]=i+1;
     f[n]=1; // present for cycle
-    int count=0, x=1;
+    int x=1;
     k--; // นับเพิ่มอีก k-1 ครั้ง
     cur=0; //init !!! case realk=0
     for(i=0; i<n; i++) {
